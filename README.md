@@ -1,7 +1,7 @@
 # iso
 ---
 Ok, time to focus...
-**Outline of basic purpose of this project:
+### Outline of basic purpose of this project:
 
 - Identify key core utilities and functions (CSS, SCSS, JS)
 - Consolidate utilities and functions into a practical toolset
@@ -14,4 +14,4 @@ Ok, time to focus...
 - Code commenting
 - Dark/Light modes
 
-**Start simple, avoid rabbit holes, etc.
+*Start simple, avoid rabbit holes, etc.
