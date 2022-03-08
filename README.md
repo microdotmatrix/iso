@@ -14,4 +14,4 @@ Ok, time to focus...
 - Code commenting
 - Dark/Light modes
 
-*Start simple, avoid rabbit holes, etc.
+**Start simple, avoid rabbit holes, etc.**
