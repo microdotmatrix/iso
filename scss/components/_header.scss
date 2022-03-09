@@ -1,0 +1,29 @@
+.header {
+   @include row();
+   padding: calc($spacing-unit * 2) 0;
+   margin: 0;
+   background-color: _slate(7);
+   &__title {
+      @include col(2);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      > svg {
+         width: 180px;
+         height: 180px;
+         margin: auto;
+      }
+   }
+   &__menu {
+      @include col(6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   &__search {
+      @include col(4);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+   }
+}
