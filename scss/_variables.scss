@@ -1,0 +1,12 @@
+// Import Colors and other functions used by global variables
+@import "config/color";
+@import "config/fonts";
+@import "config/easing";
+
+@import "helpers/social-colors";
+
+// Global Variables
+$base-url: "http://localhost/iso";
+
+
+$spacing-unit: 2rem;
