@@ -1,9 +1,8 @@
 html {
-   font-size: $fS-base;
-   line-height: $lH-base;
+   font-size: $text-root__size;
+   line-height: $text-root__line;
    width: 100%;
    height: 100%;
-   color: $text-color;
    overflow-x: hidden;
    -webkit-tap-highlight-color: transparent;
    -webkit-font-smoothing: antialiased;
@@ -11,7 +10,10 @@ html {
 }
 
 body {
-   
+   color: $text-color;
+   font-size: 1rem;
+   font-family: $kanit;
+   background-color: $body-bg;
    text-rendering: optimizeLegibility;
    -webkit-text-size-adjust: 100%;
    font-feature-settings: "kern" 1;

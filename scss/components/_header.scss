@@ -19,6 +19,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      > nav {
+         > a {
+            font-size: $nav-a__size;
+            color: $nav-a__color;
+            display: inline-flex;
+            padding: $nav-a__py $nav-a__px;
+         }
+      }
    }
    &__search {
       @include col(4);

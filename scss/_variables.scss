@@ -8,5 +8,17 @@
 // Global Variables
 $base-url: "http://localhost/iso";
 
-
+$content-width: 1140px;
 $spacing-unit: 2rem;
+
+$body-bg: _slate(2);
+$kanit: 'Kanit', sans-serif;
+
+$text-root__size: 18px;
+$text-root__line: 1.618;
+$text-color: ocGray(9);
+
+$nav-a__py: 1rem;
+$nav-a__px: 0.5rem;
+$nav-a__size: 1.2rem;
+$nav-a__color: ocCyan(4);
