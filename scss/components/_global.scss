@@ -19,3 +19,12 @@ body {
    font-feature-settings: "kern" 1;
    font-kerning: normal;
 }
+
+a {
+   color: $link-color;
+   text-decoration: none;
+   transition: all 420ms ease;
+   &:hover {
+      color: $link-hover__color;
+   }
+}

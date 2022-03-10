@@ -1,0 +1,20 @@
+.container {
+   @include adaptive($spacing-unit);
+   max-width: $content-width;
+}
+
+[data-row="flex"] {
+   @include row();
+}
+
+$data-columns: 12;
+
+@for $i from 1 through $data-columns {
+   [data-column="#{$i}"] {
+      @include col($i);
+   }
+}
+
+[data-column="auto"] {
+   @include col();
+}

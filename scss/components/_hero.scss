@@ -1,0 +1,23 @@
+.hero {
+   display: flex;
+   align-items: center;
+   padding: calc($spacing-unit * 3.33) 0;
+   background: ocGray(8);
+   &__wrapper {
+      flex-wrap: wrap;
+      align-items: center;
+   }
+   &__content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+   }
+   &__image {
+      max-height: 600px;
+      overflow: hidden;
+      > img {
+         max-width: 100%;
+         height: auto;
+      }
+   }
+}
