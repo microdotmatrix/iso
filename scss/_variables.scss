@@ -2,6 +2,7 @@
 @import "config/color";
 @import "config/fonts";
 @import "config/easing";
+@import "config/props";
 
 @import "helpers/social-colors";
 
@@ -66,3 +67,6 @@ $nav-a__size: $text--1;
 $nav-a__color: ocCyan(4);
 
 $header-bg__color: _slate(8);
+
+$footer-pt: var(--footer-pt);
+$footer-pb: var(--footer-pb);

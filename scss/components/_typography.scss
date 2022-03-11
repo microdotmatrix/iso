@@ -1,9 +1,14 @@
 h1, h2, h3, h4, h5 {
 	font-family: $advent;
-	font-weight: 400;
+	font-weight: 500;
 	line-height: 1;
-	margin: $spacing-unit 0 1.38rem;
+	//margin: $spacing-unit 0 1.38rem;
+	margin-top: clamp(#{$phi}rem, 3.14vw, #{$pi}rem);
+	margin-bottom: clamp(0.618rem, 1.618vw, 1.618rem);
 	color: _slate(8);
+	@include only(first) {
+		margin-top: 0;
+	}
 }
 
 h1 {
@@ -28,6 +33,8 @@ h5 {
 }
 
 small, 
-.text_small {
+.text-small {
 	font-size: 0.618rem;
+	line-height: 1.5;
+	letter-spacing: 0.0618rem;
 }

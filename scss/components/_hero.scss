@@ -1,7 +1,7 @@
 .hero {
    display: flex;
    align-items: center;
-   padding: calc($spacing-unit * 3.33) 0;
+   padding: #{$pi}rem 0;
    background: ocGray(8);
    &__wrapper {
       flex-wrap: wrap;
@@ -14,18 +14,11 @@
    }
    &__image {
       position: relative;
-      z-index: 2;
-      max-height: 600px;
       overflow: hidden;
+      // clip-path: polygon(16% 0, 100% 16%, 95% 88%, 0% 100%);
+      clip-path: polygon(4% 16%, 100% 0%, 91% 100%, 0 94%);
       > img {
-         position: absolute;
-         top: calc(50% - var(--ty));
-         left: 50%;
-         width: auto;
-         height: calc(100% + 200px);
-         transform: translate(-50%, -50%);
          object-fit: cover;
-         display: block;
       }
    }
 }
