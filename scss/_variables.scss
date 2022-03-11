@@ -8,8 +8,19 @@
 // Global Variables
 $base-url: "http://localhost/iso";
 
+$pi: 3.14159;
+$phi: 1.618;
+$golden: $phi;
+
 $content-width: 1280px;
-$spacing-unit: 2rem;
+$spacing-unit: 1.303rem * 1.618 !default;
+
+// Breakpoints
+$xs:                       32rem !default; // 512px
+$sm:                       48rem !default; // 768px
+$md:                       64rem !default; // 1024px
+$lg:                       80rem !default; // 1280px
+$xl:                       90rem !default; // 1440px
 
 $body-bg: _slate(9);
 
@@ -19,15 +30,31 @@ $prompt: 'Prompt', sans-serif;
 $bakbak: 'BakBak One', sans-serif;
 
 $text-root__size: 18px;
-$text-root__line: 1.618;
+$text-root__line: 1.33;
 $text-color: ocGray(4);
+$text-font: $kanit;
+$text-size: 1rem;
+$text-weight: 200;
+$text-line: 1.618;
+
+$text--0: var(--font-size-fluid-0);
+$text--1: var(--font-size-fluid-1);
+$text--2: var(--font-size-fluid-2);
+$text--3: var(--font-size-fluid-3);
+
+$fluid-1: var(--size-fluid-1);
+$fluid-2: var(--size-fluid-2);
+$fluid-3: var(--size-fluid-3);
+$fluid-4: var(--size-fluid-4);
+$fluid-5: var(--size-fluid-5);
+$fluid-6: var(--size-fluid-6);
 
 $link-color: _slate(5);
 $link-hover__color: _slate(3);
 
 $nav-a__py: 1rem;
 $nav-a__px: 0.5rem;
-$nav-a__size: 1.2rem;
+$nav-a__size: $text--1;
 $nav-a__color: ocCyan(4);
 
 $header-bg__color: _slate(8);

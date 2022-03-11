@@ -19,7 +19,7 @@
                   <defs><path id="a" d="m25.5 43.1215999c14.0832611 0 25.5 1.5911947 25.5-11.9397817s-11.4167389-31.1818182-25.5-31.1818182-25.5 17.6508418-25.5 31.1818182 11.4167389 11.9397817 25.5 11.9397817z"/><mask id="b" fill="#fff"><use fill="#fff" fill-rule="evenodd" xlink:href="#a"/></mask></defs><g fill="none" fill-rule="evenodd"><g transform="translate(6 5)"><use fill="#e43535" xlink:href="#a"/><g fill="#ececec"><circle cx="4" cy="15" mask="url(#b)" r="10"/><circle cx="47" cy="15" mask="url(#b)" r="10"/></g></g><circle cx="31.5" cy="30.5" fill="#d8d8d8" r="7.5"/><path d="m16 45h31v7.9924559c0 2.7655902-2.2294436 5.0075441-4.997902 5.0075441h-21.004196c-2.760265 0-4.997902-2.2347797-4.997902-5.0075441z" fill="#fcc24c"/><path d="m25 49v4m13-4v4" stroke="#0a3586" stroke-linecap="round" stroke-width="2"/></g>
                </svg>
             </div>
-            <div class="header__menu" data-column="6">
+            <div class="header__menu" data-column="8">
                <nav>
                   <a href="#">About Me</a>
                   <a href="#">Skillz</a>
@@ -27,7 +27,7 @@
                   <a href="#">Jerbz</a>
                </nav>
             </div>
-            <div class="header__search" data-column="4">
+            <div class="header__search" data-column="2">
                <input type="text">
                <button class="submit">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -38,7 +38,7 @@
          </div>
       </header>
 
-      <section class="hero" data-parallax-from="">
+      <section class="hero" data-parallax-from="-100px" data-parallax-to="100px">
          <div class="hero__wrapper container" data-row="flex">
             <div class="hero__content" data-column="6">
                <h1>Hello, I'm <span class="cc--slate-700">John</span>.</h1>
@@ -47,8 +47,8 @@
                   How am I doing it? Well I just started coding it, so right now I'm just using HTML, CSS (augmented with Sass), and Javascript, trying my best to keep things simple... but I doubt I'll be able to keep it that way for long. Don't worry, I'll be sure to document every language and tool I utilize, which I'll reference in detail when I'm done in the section of the page we will lovingly call <a href="#">black magic fuckery</a>.
                </p>
             </div>
-            <div class="hero__image" data-column="6">
-               <img src='http://unsplash.it/960/800?random&gravity=center' alt=''/>
+            <div class="hero__image" data-column="6" style="background-image: url('http://unsplash.it/960/800?random&gravity=center');">
+               
             </div>
          </div>
       </section>
