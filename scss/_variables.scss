@@ -16,26 +16,34 @@ $content-width: 1280px;
 $spacing-unit: 1.303rem * 1.618 !default;
 
 // Breakpoints
-$xs:                       32rem !default; // 512px
-$sm:                       48rem !default; // 768px
-$md:                       64rem !default; // 1024px
-$lg:                       80rem !default; // 1280px
-$xl:                       90rem !default; // 1440px
+$xs: 32rem !default; // 512px
+$sm: 48rem !default; // 768px
+$md: 64rem !default; // 1024px
+$lg: 80rem !default; // 1280px
+$xl: 90rem !default; // 1440px
 
-$body-bg: _slate(9);
+$body-bg: ocGray(9);
 
 // Fonts
 $kanit: 'Kanit', sans-serif;
 $prompt: 'Prompt', sans-serif;
 $bakbak: 'BakBak One', sans-serif;
+$advent: 'Advent Pro', sans-serif;
+$abel: 'Abel', sans-serif;
 
-$text-root__size: 18px;
-$text-root__line: 1.33;
+$text-root__size: 112.8%;
+$text-root__line: 1.618rem;
 $text-color: ocGray(4);
 $text-font: $kanit;
-$text-size: 1rem;
+$text-size: clamp(1rem, 1.314vw, 1.314rem);;
 $text-weight: 200;
-$text-line: 1.618;
+$text-line: 1.618rem;
+
+$text-h1: 4.222rem;
+$text-h2: 2.618rem;
+$text-h3: 1.618rem;
+$text-h4: 1.333rem;
+$text-h5: 1.111rem;
 
 $text--0: var(--font-size-fluid-0);
 $text--1: var(--font-size-fluid-1);
