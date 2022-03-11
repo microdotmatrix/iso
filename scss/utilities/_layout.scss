@@ -1,7 +1,26 @@
+// Container
+// -----
+// I had been a die hard Bourbon user for years, practically since it was first distilled. But I 
+// recently found Gerillass, a rather curiously named Sass function library with a few extra tools
+// that captured my heart. One being the elegant "adaptive" mixin, which simply generates the
+// breakpoints and widths of your container with whatever gutter width you plug into it.
+// -----
+
 .container {
    @include adaptive($spacing-unit);
    max-width: $content-width;
 }
+
+// Flex Grid + Data-Selectors...
+// -----
+// I just can't get over semantic styling enough to convert entirely to utility classes... but data-selectors  are fun, especially for anything that is assigned numeric values. And I love flexbox. I'll do some Grid stuff too, but Flex is my jam. 
+//
+// http://sassflexboxgrid.com 
+// ^^^ This guy wrote a very handy set of mixins to simplify row and column generation using Sass and Flexbox
+// fully decked out with responsive breakpoint functions and generators for utility classes. Here I'll just be
+// using the row and column mixins, passing through a @for function to generate data-attribute selectors with
+// 12 columns. 
+// -----
 
 [data-row="flex"] {
    @include row();
