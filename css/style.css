@@ -204,7 +204,7 @@ hr,
 table,
 fieldset
 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.054127rem;
 }
 
 /** Consistent indentation for lists. */
@@ -212,7 +212,7 @@ dd,
 ol,
 ul
 {
-    margin-left: 2rem;
+    margin-left: 2.108254rem;
 }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -637,7 +637,7 @@ template
 {
     .container
     {
-        max-width: calc(576px - (2rem * 2));
+        max-width: calc(576px - (2.108254rem * 2));
     }
 }
 
@@ -645,7 +645,7 @@ template
 {
     .container
     {
-        max-width: calc(768px - (2rem * 2));
+        max-width: calc(768px - (2.108254rem * 2));
     }
 }
 
@@ -653,7 +653,7 @@ template
 {
     .container
     {
-        max-width: calc(992px - (2rem * 2));
+        max-width: calc(992px - (2.108254rem * 2));
     }
 }
 
@@ -661,7 +661,7 @@ template
 {
     .container
     {
-        max-width: calc(1200px - (2rem * 2));
+        max-width: calc(1200px - (2.108254rem * 2));
     }
 }
 
@@ -736,21 +736,26 @@ template
     box-sizing: border-box; max-width: 100%; padding: 0; flex-grow: 1; flex-basis: 0;
 }
 
+.trans
+{transition: transform .1s linear; 
+    /* The will-change CSS property provides a way for authors to hint browsers about the kind of changes to be expected on an element, so that the browser can setup appropriate optimizations ahead of time before the element is actually changed. */ will-change: transform;
+}
+
 html
 {
-    font-size: 18px; line-height: 1.618; overflow-x: hidden; width: 100%; height: 100%; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    font-size: 18px; line-height: 1.33; overflow-x: hidden; width: 100%; height: 100%; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
 
 body
-{font-family: 'Kanit', sans-serif; font-size: 1rem; 
+{font-family: 'Kanit', sans-serif; font-size: 1rem; font-weight: 200; 
 
     color: #ced4da; background-color: #09090b; text-rendering: optimizeLegibility; -webkit-text-size-adjust: 100%; font-feature-settings: 'kern' 1; font-kerning: normal;
 }
 
 a
-{transition: all 420ms ease; text-decoration: none; 
+{transition: all 300ms ease; text-decoration: underline; 
 
-    color: #727c8b;
+    color: #727c8b; text-decoration-thickness: .04rem;
 }
 
 a:hover
@@ -759,19 +764,18 @@ a:hover
 }
 
 .header
-{display: flex; flex-direction: row; 
-
-    box-sizing: border-box; width: 100%; margin: 0 auto; margin: 0; padding: calc($spacing-unit * 2) 0; background-color: #181b20; flex: 0 1 auto; flex-wrap: wrap;
+{
+    display: flex; margin: 0; padding: 6.6232696839rem 0 3.411154972rem; background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSIjMTgxQjIwIj48L3JlY3Q+CjxwYXRoIGQ9Ik0yOCAwTDI4IDM0TDAgNTBMMCA4NEwyOCAxMDBMNTYgODRMNTYgNTBMMjggMzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyN0M4QiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+CjxwYXRoIGQ9Ik0yOCA2NkwwIDUwTDAgMTZMMjggMEw1NiAxNkw1NiA1MEwyOCA2NkwyOCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0MwQ0ZERiIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+Cjwvc3ZnPg=='); background-color: #181b20; align-items: flex-end;
 }
 
 .header__title
 {
-    display: flex; align-items: center; justify-content: flex-start;
+    display: flex; align-items: center; justify-content: center;
 }
 
 .header__title > svg
 {
-    width: 160px; height: 160px; margin: auto;
+    width: 140px; height: 140px; margin: auto;
 }
 
 .header__menu
@@ -781,12 +785,23 @@ a:hover
 
 .header__menu > nav > a
 {
-    font-size: 1.2rem; display: inline-flex; padding: 1rem .5rem; color: #3bc9db;
+    font-size: var(--font-size-fluid-1); display: inline-flex; padding: 1rem .5rem; transition: all 300ms ease-in; text-decoration: none; color: #3bc9db;
+}
+
+.header__menu > nav > a:hover
+{
+    color: #91e1eb;
 }
 
 .header__search
 {
     display: flex; align-items: center; justify-content: flex-end;
+}
+
+.header__search input[type='text']
+{font-size: var(--font-size-0); 
+
+    width: 80%; padding: .33rem .66rem; border: 1px solid #09090b; outline: 0; background: rgba(241, 243, 245, .4);
 }
 
 .logo
@@ -810,12 +825,11 @@ a:hover
 }
 
 .hero__image
-{overflow: hidden; 
-
-    max-height: 600px;
+{
+    position: relative; z-index: 2; overflow: hidden; max-height: 600px;
 }
 
 .hero__image > img
 {
-    max-width: 100%; height: auto;
+    position: absolute; top: calc(50% - var(--ty)); left: 50%; display: block; width: auto; height: calc(100% + 200px); transform: translate(-50%, -50%); -o-object-fit: cover;    object-fit: cover;
 }
