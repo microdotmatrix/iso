@@ -1,4 +1,27 @@
 :root {
+   --body-bgColor: var(--slate-900);
+   --text-color: var(--slate-400);
+   --heading-color: var(--slate-800);
+
    --footer-pt: 1.618rem;
    --footer-pb: 3.14159rem;
+
+   --h1-size: clamp(6.854rem, 11.089vw, 11.089rem);
+   --h2-size: clamp(4.236rem, 6.854vw, 6.854rem);
+   --h3-size: clamp(2.618rem, 4.236vw, 4.236rem);
+   --h4-size: clamp(1.618rem, 2.618vw, 2.618rem);
+   --h5-size: clamp(1.314rem, 1.618vw, 1.618rem);
+
+   @include breakpoint(max, $sm) {
+      --h2-size: 3rem;
+   }
+   @include breakpoint($sm, $lg) {
+      --h2-size: 7vw;
+   }
+}
+
+body.light-mode {
+   --body-bgColor: var(--slate-200);
+   --text-color: var(--slate-800);
+   --heading-color: var(--slate-500);
 }

@@ -27,3 +27,9 @@
    
    @return $platform;
 }
+
+// A quick shorthand function for tweaking the size of a set variable using calc( $variable * x % ) ...useful for setting font sizes of headings and such that are scaled mathematically without altering the scaling.
+
+@function _vp($variable, $percent) {
+   @return calc($variable + $percent);
+}

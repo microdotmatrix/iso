@@ -22,13 +22,18 @@
 // 12 columns. 
 // -----
 
-[data-row="flex"] {
+[data-flex],
+[data-flex="row"] {
    @include row();
 }
 
-$data-columns: 12;
+[data-flex="column"] {
+   @include row($direction: column);
+}
 
-@for $i from 1 through $data-columns {
+$flex-columns: 12;
+
+@for $i from 1 through $flex-columns {
    [data-column="#{$i}"] {
       @include col($i);
    }
@@ -37,3 +42,36 @@ $data-columns: 12;
 [data-column="auto"] {
    @include col();
 }
+
+[data-grid] {
+   display: grid;
+   margin: 0 auto;
+   padding: 0;
+   width: 100%;
+}
+
+[data-grid] > div {
+   padding: $space-phi / $pi;
+}
+
+// Using Open Prop's grid-adapt-mixin custom property for a easy, responsive grid layout that will generate 3 columns automatically on large screens and adapt columns down on smaller screens.
+
+[data-grid="auto"] {
+   grid-template-columns: var(--grid_adapt_mixin);
+}
+
+$grid-columns: 6;
+
+@for $i from 1 through $grid-columns {
+   [data-grid="#{$i}"] {
+      grid-template-columns: repeat($i, 1fr);
+      @include breakpoint(max, $sm) {
+         grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+      }
+      @include breakpoint($sm, $md) {
+         grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+      }
+   }
+}
+
+

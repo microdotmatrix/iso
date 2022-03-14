@@ -31,7 +31,7 @@ $breakpoint-ups: ($breakpoint-sm-up, $breakpoint-md-up, $breakpoint-lg-up, $brea
 $breakpoint-all-prefixes: ("xs", "xs-only", "sm", "sm-only", "md", "md-only", "lg", "lg-only", "xl");
 $breakpoint-up-prefixes: ("xs", "sm", "md", "lg", "xl");
 
-@mixin row($wrap: wrap, $full-width: "false") {
+@mixin row($wrap: wrap, $full-width: "false", $direction: row) {
    box-sizing: border-box;
    margin: 0 auto;
    width: 100%;
@@ -39,7 +39,7 @@ $breakpoint-up-prefixes: ("xs", "sm", "md", "lg", "xl");
    display: -ms-flexbox;
    display: flex;
    flex: 0 1 auto;
-   flex-direction: row;
+   flex-direction: $direction;
    flex-wrap: $wrap;
    // // Overrides flexbox's default behavior of making all children equal height
    // align-items: flex-start; // If this was not in place it would require two classes to make a row full of unequal height columns aligned top, middle, bottom

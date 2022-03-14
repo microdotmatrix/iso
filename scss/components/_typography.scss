@@ -5,7 +5,8 @@ h1, h2, h3, h4, h5 {
 	//margin: $spacing-unit 0 1.38rem;
 	margin-top: clamp(#{$phi}rem, 3.14vw, #{$pi}rem);
 	margin-bottom: clamp(0.618rem, 1.618vw, 1.618rem);
-	color: _slate(8);
+	color: var(--heading-color);
+	transition: all 200ms ease;
 	@include only(first) {
 		margin-top: 0;
 	}
@@ -13,23 +14,23 @@ h1, h2, h3, h4, h5 {
 
 h1 {
 	margin-top: 0;
-	font-size: clamp(6.854rem, 11.089vw, 11.089rem);
+	font-size: $h1-size;
 }
 
 h2 {
-	font-size: clamp(4.236rem, 6.854vw, 6.854rem);
+	font-size: $h2-size;
 }
 
 h3 {
-	font-size: clamp(2.618rem, 4.236vw, 4.236rem);
+	font-size: $h3-size;
 }
 
 h4 {
-	font-size: clamp(1.618rem, 2.618vw, 2.618rem);
+	font-size: $h4-size;
 }
 
 h5 {
-	font-size: clamp(1.314rem, 1.618vw, 1.618rem);
+	font-size: $h5-size;
 }
 
 small, 

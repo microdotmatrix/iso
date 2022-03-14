@@ -1,3 +1,19 @@
+// Breakpoints
+$xs: 32rem !default; // 512px
+$sm: 48rem !default; // 768px
+$md: 64rem !default; // 1024px
+$lg: 80rem !default; // 1280px
+$xl: 90rem !default; // 1440px
+
+$map-for-breakpoints: (
+  "xsmall": 0,
+  "small": 768px,
+  "medium": 1024px,
+  "large": 1280px,
+  "xlarge": 1440px,
+);
+
+
 // Import Colors and other functions used by global variables
 @import "config/color";
 @import "config/fonts";
@@ -9,21 +25,24 @@
 // Global Variables
 $base-url: "http://localhost/iso";
 
-$pi: 3.14159;
-$phi: 1.618;
+$phi: 1.618; // Golden Ratio
+$e: 2.71828; // Euler's Constant
+$pi: 3.14159; // Pi
 $golden: $phi;
 
-$content-width: 1280px;
-$spacing-unit: 1.303rem * 1.618 !default;
+$content-width: 1440px;
+$spacing-unit: 1.618rem * $phi !default;
+$spacing-unit-2: 1.618rem * $e;
+$spacing-unit-3: 1.618rem * $pi;
 
-// Breakpoints
-$xs: 32rem !default; // 512px
-$sm: 48rem !default; // 768px
-$md: 64rem !default; // 1024px
-$lg: 80rem !default; // 1280px
-$xl: 90rem !default; // 1440px
+$space-phi: $spacing-unit;
+$space-e: $spacing-unit-2;
+$space-pi: $spacing-unit-3;
 
-$body-bg: ocGray(9);
+$grey1:                  #2e3338;
+$grey2:                  #171a1c;
+
+$body-bg: var(--body-bgColor);
 
 // Fonts
 $kanit: 'Kanit', sans-serif;
@@ -34,17 +53,17 @@ $abel: 'Abel', sans-serif;
 
 $text-root__size: 112.8%;
 $text-root__line: 1.618rem;
-$text-color: ocGray(4);
+$text-color: var(--text-color);
 $text-font: $kanit;
 $text-size: clamp(1rem, 1.314vw, 1.314rem);;
 $text-weight: 200;
 $text-line: 1.618rem;
 
-$text-h1: 4.222rem;
-$text-h2: 2.618rem;
-$text-h3: 1.618rem;
-$text-h4: 1.333rem;
-$text-h5: 1.111rem;
+$h1-size: var(--h1-size);
+$h2-size: var(--h2-size);
+$h3-size: var(--h3-size);
+$h4-size: var(--h4-size);
+$h5-size: var(--h5-size);
 
 $text--0: var(--font-size-fluid-0);
 $text--1: var(--font-size-fluid-1);
@@ -66,6 +85,8 @@ $nav-a__px: 0.5rem;
 $nav-a__size: $text--1;
 $nav-a__color: ocCyan(4);
 
+$header-pt: $space-pi;
+$header-pb: $space-phi;
 $header-bg__color: _slate(8);
 
 $footer-pt: var(--footer-pt);
