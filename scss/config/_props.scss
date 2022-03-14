@@ -13,15 +13,20 @@
    --h5-size: clamp(1.314rem, 1.618vw, 1.618rem);
 
    @include breakpoint(max, $sm) {
-      --h2-size: 3rem;
+      --h2-size: 3.14rem;
    }
    @include breakpoint($sm, $lg) {
-      --h2-size: 7vw;
+      --h2-size: clamp(3.814rem, 6.168vw, 6.168rem);
    }
 }
 
-body.light-mode {
-   --body-bgColor: var(--slate-200);
-   --text-color: var(--slate-800);
-   --heading-color: var(--slate-500);
+.light,
+.light img,
+.light picture,
+.light video,
+.light canvas {
+   //--body-bgColor: var(--slate-200);
+   //--text-color: var(--slate-800);
+   //--heading-color: var(--slate-500);
+   filter: invert(100%) hue-rotate(180deg);
 }

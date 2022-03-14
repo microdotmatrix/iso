@@ -1,3 +1,3 @@
 $(".theme-switch").on("click", () => {
-	$("body").toggleClass("light-mode");
+	$("body").toggleClass("light");
 });

@@ -7,7 +7,7 @@
 // -----
 
 .container {
-   @include adaptive($spacing-unit);
+   @include adaptive($space-pi/$e);
    max-width: $content-width;
 }
 

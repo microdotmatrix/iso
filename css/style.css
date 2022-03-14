@@ -125,7 +125,7 @@
 {
     :root
     {
-        --h2-size: 3rem;
+        --h2-size: 3.14rem;
     }
 }
 
@@ -133,13 +133,17 @@
 {
     :root
     {
-        --h2-size: 7vw;
+        --h2-size: clamp(3.814rem, 6.168vw, 6.168rem);
     }
 }
 
-body.light-mode
+.light,
+.light img,
+.light picture,
+.light video,
+.light canvas
 {
-    --body-bgColor: var(--slate-200); --text-color: var(--slate-800); --heading-color: var(--slate-500);
+    filter: invert(100%) hue-rotate(180deg);
 }
 
 /* ==========================================================================
@@ -669,7 +673,7 @@ template
 {
     .container
     {
-        max-width: calc(768px - (2.617924rem * 2));
+        max-width: calc(768px - (1.8699665303rem * 2));
     }
 }
 
@@ -677,7 +681,7 @@ template
 {
     .container
     {
-        max-width: calc(1024px - (2.617924rem * 2));
+        max-width: calc(1024px - (1.8699665303rem * 2));
     }
 }
 
@@ -685,7 +689,7 @@ template
 {
     .container
     {
-        max-width: calc(1280px - (2.617924rem * 2));
+        max-width: calc(1280px - (1.8699665303rem * 2));
     }
 }
 
@@ -693,7 +697,7 @@ template
 {
     .container
     {
-        max-width: calc(1440px - (2.617924rem * 2));
+        max-width: calc(1440px - (1.8699665303rem * 2));
     }
 }
 
@@ -926,10 +930,19 @@ html
     font-size: 112.8%; line-height: 1.618rem; overflow-x: hidden; width: 100%; height: 100%; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+img,
+picture,
+video,
+canvas
+{
+    transition: filter 300ms ease;
+}
+
 body
 {font-family: 'Kanit', sans-serif; font-size: clamp(1rem, 1.314vw, 1.314rem); font-weight: 200; display: grid; width: 100%; height: 100%; 
 
-    color: var(--text-color); background-color: var(--body-bgColor); text-rendering: optimizeLegibility; -webkit-text-size-adjust: 100%; font-feature-settings: 'kern' 1; font-kerning: normal; place-content: space-between;
+    color: var(--text-color); background-color: var(--body-bgColor); text-rendering: optimizeLegibility; -webkit-text-size-adjust: 100%; font-feature-settings: 'kern' 1; font-kerning: normal; place-content: stretch;
 }
 
 a
