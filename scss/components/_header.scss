@@ -54,8 +54,15 @@
 
 // Sandboxing Another format....
 .r-header {
+   position: relative;
    display: flex;
    margin: 0;
    padding: 0;
-   background: $grey2;
+   background: darken($grey2, 10%);
+}
+
+.theme-select {
+   position: absolute;
+   top: $space-phi;
+   right: $space-phi;
 }

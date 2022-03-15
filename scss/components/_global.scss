@@ -9,6 +9,16 @@ html {
    -moz-osx-font-smoothing: grayscale;
 }
 
+
+// Dark/Light Mode Inversion
+.light,
+.light img,
+.light picture,
+.light video,
+.light canvas {
+   filter: invert(100%) hue-rotate(180deg);
+}
+
 html,
 img,
 picture,
@@ -28,9 +38,10 @@ body {
    font-feature-settings: "kern" 1;
    font-kerning: normal;
    display: grid;
-   place-content: stretch;
+   place-content: space-between;
    width: 100%;
    height: 100%;
+   position: relative;
 }
 
 a {
@@ -43,22 +54,8 @@ a {
    }
 }
 
-button {
-   display: block;
-   border: 1px solid rgba(_slate(2), 0.2);
-   background: rgba(_slate(9), 0.4);
-   color: currentColor;
-   outline: none;
-   margin: 0;
-   padding: $space-phi / $pi;
-   width: fit-content;
-}
-
 .content {
    display: grid;
    width: 100%;
    align-content: start;
-   .theme-switch {
-      align-self: center;
-   }
 }

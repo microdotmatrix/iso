@@ -12,6 +12,7 @@
 @import "core/mixins";
 @import "core/flex-grid";
 
+@import "config/components";
 @import "config/reset";
 @import "config/normalize";
 
@@ -21,6 +22,7 @@
 @import "components/global";
 @import "components/typography";
 @import "components/media";
+@import "components/buttons";
 @import "components/header";
 @import "components/hero";
 @import "components/footer";

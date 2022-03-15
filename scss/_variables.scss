@@ -13,7 +13,6 @@ $map-for-breakpoints: (
   "xlarge": 1440px,
 );
 
-
 // Import Colors and other functions used by global variables
 @import "config/color";
 @import "config/fonts";
@@ -23,71 +22,74 @@ $map-for-breakpoints: (
 @import "helpers/social-colors";
 
 // Global Variables
-$base-url: "http://localhost/iso";
+$base-url:            "http://localhost/iso";
 
-$phi: 1.618; // Golden Ratio
-$e: 2.71828; // Euler's Constant
-$pi: 3.14159; // Pi
-$golden: $phi;
+$phi:                 1.618; // Golden Ratio
+$e:                   2.71828; // Euler's Constant
+$pi:                  3.14159; // Pi
+$golden:              $phi;
 
-$content-width: 1440px;
-$spacing-unit: 1.618rem * $phi !default;
-$spacing-unit-2: 1.618rem * $e;
-$spacing-unit-3: 1.618rem * $pi;
+$content-width:       1440px;
+$spacing-unit:        1.618rem * $phi !default;
+$spacing-unit-2:      1.618rem * $e;
+$spacing-unit-3:      1.618rem * $pi;
 
-$space-phi: $spacing-unit;
-$space-e: $spacing-unit-2;
-$space-pi: $spacing-unit-3;
+$space-phi:           $spacing-unit;
+$space-e:             $spacing-unit-2;
+$space-pi:            $spacing-unit-3;
 
-$grey1:                  #2e3338;
-$grey2:                  #171a1c;
+$grey1:             #2e3338;
+$grey2:             #171a1c;
 
-$body-bg: var(--body-bgColor);
+$body-bg:             var(--body-bgColor);
 
 // Fonts
-$kanit: 'Kanit', sans-serif;
-$prompt: 'Prompt', sans-serif;
-$bakbak: 'BakBak One', sans-serif;
-$advent: 'Advent Pro', sans-serif;
-$abel: 'Abel', sans-serif;
+$kanit:               'Kanit', sans-serif;
+$prompt:              'Prompt', sans-serif;
+$bakbak:              'BakBak One', sans-serif;
+$advent:              'Advent Pro', sans-serif;
+$abel:                'Abel', sans-serif;
 
-$text-root__size: 112.8%;
-$text-root__line: 1.618rem;
-$text-color: var(--text-color);
-$text-font: $kanit;
-$text-size: clamp(1rem, 1.314vw, 1.314rem);;
-$text-weight: 200;
-$text-line: 1.618rem;
+$text-root__size:     112.8%;
+$text-root__line:     1.618rem;
+$text-color:          var(--text-color);
+$text-font:           $kanit;
+$text-size:           clamp(1rem, 1.314vw, 1.314rem);;
+$text-weight:         200;
+$text-line:           1.618rem;
 
-$h1-size: var(--h1-size);
-$h2-size: var(--h2-size);
-$h3-size: var(--h3-size);
-$h4-size: var(--h4-size);
-$h5-size: var(--h5-size);
+$h1-size:             var(--h1-size);
+$h2-size:             var(--h2-size);
+$h3-size:             var(--h3-size);
+$h4-size:             var(--h4-size);
+$h5-size:             var(--h5-size);
 
-$text--0: var(--font-size-fluid-0);
-$text--1: var(--font-size-fluid-1);
-$text--2: var(--font-size-fluid-2);
-$text--3: var(--font-size-fluid-3);
+$text--0:             var(--font-size-fluid-0);
+$text--1:             var(--font-size-fluid-1);
+$text--2:             var(--font-size-fluid-2);
+$text--3:             var(--font-size-fluid-3);
 
-$fluid-1: var(--size-fluid-1);
-$fluid-2: var(--size-fluid-2);
-$fluid-3: var(--size-fluid-3);
-$fluid-4: var(--size-fluid-4);
-$fluid-5: var(--size-fluid-5);
-$fluid-6: var(--size-fluid-6);
+$fluid-1:             var(--size-fluid-1);
+$fluid-2:             var(--size-fluid-2);
+$fluid-3:             var(--size-fluid-3);
+$fluid-4:             var(--size-fluid-4);
+$fluid-5:             var(--size-fluid-5);
+$fluid-6:             var(--size-fluid-6);
 
-$link-color: _slate(5);
-$link-hover__color: _slate(3);
+$link-color:          _slate(5);
+$link-hover__color:   _slate(3);
 
-$nav-a__py: 1rem;
-$nav-a__px: 0.5rem;
-$nav-a__size: $text--1;
-$nav-a__color: ocCyan(4);
+$button-bg:           rgba(_slate(9), 0.4);
+$button-border:       currentColor;
 
-$header-pt: $space-pi;
-$header-pb: $space-phi;
-$header-bg__color: _slate(8);
+$nav-a__py:           1rem;
+$nav-a__px:           0.5rem;
+$nav-a__size:         $text--1;
+$nav-a__color:        ocCyan(4);
 
-$footer-pt: var(--footer-pt);
-$footer-pb: var(--footer-pb);
+$header-pt:           $space-pi;
+$header-pb:           $space-phi;
+$header-bg__color:    _slate(8);
+
+$footer-pt:           var(--footer-pt);
+$footer-pb:           var(--footer-pb);

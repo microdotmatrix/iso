@@ -19,14 +19,3 @@
       --h2-size: clamp(3.814rem, 6.168vw, 6.168rem);
    }
 }
-
-.light,
-.light img,
-.light picture,
-.light video,
-.light canvas {
-   //--body-bgColor: var(--slate-200);
-   //--text-color: var(--slate-800);
-   //--heading-color: var(--slate-500);
-   filter: invert(100%) hue-rotate(180deg);
-}
