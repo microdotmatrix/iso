@@ -58,7 +58,75 @@
    display: flex;
    margin: 0;
    padding: 0;
-   background: darken($grey2, 10%);
+   //background: $grey2;
+   &__menu {
+      padding-top: $space-phi/$e;
+      > nav {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         gap: var(--size-fluid-1);
+         > a {
+            font-size: $h3-size;
+            font-weight: 500;
+            line-height: var(--size-fluid-4);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            position: relative;
+            display: block;
+            width: fit-content;
+            text-shadow: 0 0 0 rgba(#fff, 0);
+            transition: all 666ms;
+            &:hover {
+               color: desaturate(ocGrape(1), 0.3);
+               transform: scale(1.0618);
+               transition: all 333ms;
+               &::before {
+                  top: -3px;
+                  left: -2px;
+                  letter-spacing: -2px;
+                  color: ocGrape(5);
+                  mix-blend-mode: color-burn;
+                  filter: blur(1px);
+                  transform: skew(12deg) scale(1.0618);
+                  animation-name: menuLink--before;
+                  animation-duration: 4s;
+                  animation-fill-mode: both;
+                  animation-iteration-count: infinite;
+                  //opacity: 1;
+               }
+               &::after {
+                  width: 130%;
+                  //outline: 2px solid $grey2;
+               }
+            }
+            &::before {
+               content: attr(data-link);
+               position: absolute;
+               top: 0;
+               left: 0;
+               height: 1.9rem;
+               filter: blur(0);
+               overflow: hidden;
+               transition: all 666ms;
+            }
+            &::after {
+               content: "";
+               position: absolute;
+               width: 0;
+               height: 2px;
+               top: 60%;
+               left: 50%;
+               transform: translate(-50%, -60%);
+               //background: ocGrape(3);
+               //background: radial-gradient(circle, rgba(207,0,238,1) 0%, rgba(247,38,215,0.7231267507002801) 50%, rgba(255,255,255,0) 100%);
+               background: radial-gradient(circle, rgba(ocGrape(7),1) 0%, rgba(ocGrape(6),0.75) 75%, rgba(255,255,255,0) 100%);
+               transition: all 333ms ease;
+            }
+         }
+      }
+   }
 }
 
 .theme-select {

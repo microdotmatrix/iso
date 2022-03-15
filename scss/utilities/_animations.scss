@@ -1,0 +1,42 @@
+@keyframes menuLink {
+   0% {
+      //text-shadow: 0 0 0 rgba(#fff, 0);
+      @include text-shadow(
+         top rgba(ocGrape(3), 0.0) 0px true, 
+         bottom rgba(ocPink(2), 0.0) 0px true, 
+         left rgba(ocPink(3), 0.0) 0px true,
+         right rgba(ocGrape(2), 0.0) 0px true
+      );
+      
+   }
+   50% {
+      //text-shadow: 4px -1px 6px rgba(ocGrape(2), 0.6);
+      @include text-shadow(
+         top rgba(ocGrape(3), 0.07) 4px 2px true, 
+         bottom rgba(ocPink(2), 0.05) 2px 2px true, 
+         left rgba(ocPink(3), 0.1) 6px 1px true,
+         right rgba(ocGrape(2), 0.1) 5px 1px true
+      );
+   }
+   100% {
+      //text-shadow: 1px 0 3px rgba(ocGrape(6), 0.1);
+      @include text-shadow(
+         top rgba(ocGrape(3), 0.025) 2px true, 
+         bottom rgba(ocPink(2), 0.01) 0px true, 
+         left rgba(ocPink(3), 0.06) 2px true,
+         right rgba(ocGrape(2), 0.05) 3px true
+      );
+   }
+}
+
+@keyframes menuLink--before {
+   0% {
+      filter: blur(1px);
+   }
+   50% {
+      filter: blur(2px);
+   }
+   100% {
+      filter: blur(1px);
+   }
+}

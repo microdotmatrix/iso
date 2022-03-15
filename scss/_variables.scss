@@ -41,7 +41,7 @@ $space-pi:            $spacing-unit-3;
 $grey1:             #2e3338;
 $grey2:             #171a1c;
 
-$body-bg:             var(--body-bgColor);
+$body-bg:             var(--gradient-23);
 
 // Fonts
 $kanit:               'Kanit', sans-serif;
@@ -58,6 +58,7 @@ $text-size:           clamp(1rem, 1.314vw, 1.314rem);;
 $text-weight:         200;
 $text-line:           1.618rem;
 
+$heading-color:       var(--heading-color);
 $h1-size:             var(--h1-size);
 $h2-size:             var(--h2-size);
 $h3-size:             var(--h3-size);
@@ -77,7 +78,7 @@ $fluid-5:             var(--size-fluid-5);
 $fluid-6:             var(--size-fluid-6);
 
 $link-color:          _slate(5);
-$link-hover__color:   _slate(3);
+$link-color--hover:   _slate(3);
 
 $button-bg:           rgba(_slate(9), 0.4);
 $button-border:       currentColor;

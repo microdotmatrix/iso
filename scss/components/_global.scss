@@ -11,6 +11,10 @@ html {
 
 
 // Dark/Light Mode Inversion
+.light {
+   --body-bg: var(--gradient-9);
+}
+
 .light,
 .light img,
 .light picture,
@@ -32,12 +36,14 @@ body {
    font-size: $text-size;
    font-family: $text-font;
    font-weight: $text-weight;
-   background-color: $body-bg;
+   background: var(--body-bg);
+   background-size: 100%;
    text-rendering: optimizeLegibility;
    -webkit-text-size-adjust: 100%;
    font-feature-settings: "kern" 1;
    font-kerning: normal;
-   display: grid;
+   display: flex;
+   flex-direction: column;
    place-content: space-between;
    width: 100%;
    height: 100%;
@@ -50,12 +56,23 @@ a {
    text-decoration-thickness: 0.06rem;
    transition: all 300ms ease;
    &:hover {
-      color: $link-hover__color;
+      color: $link-color--hover;
    }
 }
 
 .content {
    display: grid;
-   width: 100%;
    align-content: start;
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0 $space-phi/$pi;
+   &__text {
+      //width: var(--size-content-3);
+   }
+   &__image {
+      position: relative;
+      width: 70%;
+      border-radius: var(--radius-blob-2);
+   }
 }
