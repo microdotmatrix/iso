@@ -67,7 +67,7 @@ table {
 
 
 /**
-* 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+* 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;
 *    on fieldsets.
 */
 
@@ -97,7 +97,7 @@ fieldset {
  hr,
  table,
  fieldset {
-   margin-bottom: $spacing-unit / 2;
+   margin-bottom: calc($spacing-unit / 2);
  }
  
  

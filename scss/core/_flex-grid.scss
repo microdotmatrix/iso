@@ -10,10 +10,10 @@ $gutter: 0 !default; // Set gutter size
 
 $content-well-max-width: "none" !default; // Set the max-width of the content well
 
-$sm-start: ($xs-max + 1); // Generate sm breakpoint's min width
-$md-start: ($sm-max + 1); // Generate md breakpoint's min width
-$lg-start: ($md-max + 1); // Generate lg breakpoint's min width
-$xl-start: ($lg-max + 1); // Generate xl breakpoint's min width
+$sm-start: calc($xs-max + 1px); // Generate sm breakpoint's min width
+$md-start: calc($sm-max + 1px); // Generate md breakpoint's min width
+$lg-start: calc($md-max + 1px); // Generate lg breakpoint's min width
+$xl-start: calc($lg-max + 1px); // Generate xl breakpoint's min width
 
 // Breakpoints
 // Create breakpoint range statements to be used in media queries
@@ -71,8 +71,8 @@ $breakpoint-up-prefixes: ("xs", "sm", "md", "lg", "xl");
          @warn "Column number must be greater than 0 and less than or equal to total number of columns in the grid (#{$grid-columns})";
       } @else {
          box-sizing: border-box;
-         flex-basis: 100% / $grid-columns * $col-number;
-         max-width: 100% / $grid-columns * $col-number;
+         flex-basis: calc(100% / $grid-columns * $col-number);
+         max-width: calc(100% / $grid-columns * $col-number);
          padding: $gutter;
       }
       // If no col number is passed then arg is set to "auto" by default

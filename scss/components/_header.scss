@@ -60,7 +60,7 @@
    padding: 0;
    //background: $grey2;
    &__menu {
-      padding-top: $space-phi/$e;
+      padding-top: calc($space-phi / $e);
       > nav {
          position: relative;
          display: flex;

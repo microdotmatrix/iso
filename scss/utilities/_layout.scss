@@ -7,7 +7,7 @@
 // -----
 
 .container {
-   @include adaptive($space-pi/$e);
+   @include adaptive(calc($space-pi/$e));
    max-width: $content-width;
 }
 
@@ -51,7 +51,7 @@ $flex-columns: 12;
 }
 
 [data-grid] > div {
-   padding: $space-phi / $pi;
+   padding: calc($space-phi / $pi);
 }
 
 // Using Open Prop's grid-adapt-mixin custom property for a easy, responsive grid layout that will generate 3 columns automatically on large screens and adapt columns down on smaller screens.

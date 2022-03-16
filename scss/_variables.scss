@@ -21,44 +21,7 @@ $map-for-breakpoints: (
 
 @import "helpers/social-colors";
 
-@use "accoutrement/sass/scale";
 
-$map: (
-  'root': 18px,
-  // internal reference & adjustments
-  'gutter': '#root'
-    (
-      scale: '_golden' 1,
-      'convert-units': 'rem',
-    ),
-);
-
-$ratios: (
-  'my-ratio': 1.618,
-);
-
-$sizes: (
-  // define explicit values
-  'root': 18px,
-  'icons': 1em,
-  'page': 80rem,
-
-  // reference existing sizes
-  'text': '#root',
-
-  // apply adjustments and conversions
-  // using named-ratios or arbitrary functions
-  'rhythm': '#root' ( scale: '_golden' 1, 'convert-units': 'rem'),
-
-  'h1': '#root' ( scale: 'my-ratio' 5 ),
-  'h2': '#root' ( scale: 'my-ratio' 4 ),
-  'h3': '#root' ( scale: 'my-ratio' 3 ),
-  'h4': '#root' ( scale: 'my-ratio' 2 ),
-  'h5': '#root' ( scale: 'my-ratio' 1 ),
-
-  // define calc() output based on existing sizes
-  'viewport-relative': 'calc(%s + %s)' ('%s': '#root' 2vw),
-);
 
 // Global Variables
 $base-url:            "http://localhost/iso";
@@ -69,9 +32,9 @@ $pi:                  3.14159; // Pi
 $golden:              $phi;
 
 $content-width:       1440px;
-$spacing-unit:        1.618rem * $phi !default;
-$spacing-unit-2:      1.618rem * $e;
-$spacing-unit-3:      1.618rem * $pi;
+$spacing-unit:        calc(1.618rem * $phi) !default;
+$spacing-unit-2:      calc(1.618rem * $e);
+$spacing-unit-3:      calc(1.618rem * $pi);
 
 $space-phi:           $spacing-unit;
 $space-e:             $spacing-unit-2;

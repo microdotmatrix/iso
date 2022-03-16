@@ -5,7 +5,7 @@ button {
    color: currentColor;
    outline: none;
    margin: 0;
-   padding: $space-phi / $pi;
+   padding: calc($space-phi / $pi);
    width: fit-content;
 }
 
