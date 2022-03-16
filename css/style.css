@@ -142,6 +142,7 @@
     }
 }
 
+@use 'accoutrement/sass/scale';
 :root
 {
     --button-bg: --button-border:
