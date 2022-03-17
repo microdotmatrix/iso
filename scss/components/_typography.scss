@@ -2,7 +2,6 @@ h1, h2, h3, h4, h5 {
 	font-family: $advent;
 	font-weight: 500;
 	line-height: 1;
-	//margin: $spacing-unit 0 1.38rem;
 	margin-top: clamp(#{$phi}rem, 3.14vw, #{$pi}rem);
 	margin-bottom: clamp(0.618rem, 1.618vw, 1.618rem);
 	color: var(--heading-color);
@@ -14,23 +13,28 @@ h1, h2, h3, h4, h5 {
 
 h1 {
 	margin-top: 0;
-	font-size: $h1-size;
+	font-size: $h1;
+	letter-spacing: -0.3vw;
 }
 
 h2 {
-	font-size: $h2-size;
+	font-size: $h2;
+	letter-spacing: -0.2vw;
 }
 
 h3 {
-	font-size: $h3-size;
+	font-size: $h3;
+	letter-spacing: -0.15vw;
 }
 
 h4 {
-	font-size: $h4-size;
+	font-size: $h4;
+	letter-spacing: -0.1vw;
 }
 
 h5 {
-	font-size: $h5-size;
+	font-size: $h5;
+	letter-spacing: -0.05vw;
 }
 
 small, 

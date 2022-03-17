@@ -35,7 +35,7 @@ body {
    font-size: $text-size;
    font-family: $text-font;
    font-weight: $text-weight;
-   background: var(--body-bg);
+   background: $body-bg;
    background-size: 100%;
    text-rendering: optimizeLegibility;
    -webkit-text-size-adjust: 100%;
@@ -50,12 +50,12 @@ body {
 }
 
 a {
-   color: $link-color;
+   color: $a;
    text-decoration-line: underline;
    text-decoration-thickness: 0.06rem;
    transition: all 300ms ease;
    &:hover {
-      color: $link-color--hover;
+      color: $a--hover;
    }
 }
 

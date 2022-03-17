@@ -12,7 +12,6 @@
 @import "core/mixins";
 @import "core/flex-grid";
 
-@import "config/components";
 @import "config/reset";
 @import "config/normalize";
 
@@ -29,5 +28,3 @@
 @import "components/footer";
 
 @import "toolkit/luge/luge";
-
-@import "utilities/sandbox";

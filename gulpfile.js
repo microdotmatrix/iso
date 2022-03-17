@@ -9,11 +9,12 @@ const autoprefixer = require('gulp-autoprefixer');
 function build() {
    return gulp
    .src('scss/**/*.scss')
-   .pipe(sass()
+   .pipe(sass({outputStyle: 'compressed'})
       .on('error', sass.logError)
    )
    .pipe(autoprefixer())
    .pipe(csscomb())
+   .pipe(gulp.dest('css/'))
    .pipe(cleancss())
    .pipe(rename({
       suffix: '.min'
