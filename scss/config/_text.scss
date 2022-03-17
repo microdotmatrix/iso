@@ -39,7 +39,7 @@ $container-sizes: (
 
 :where(html) {
    @include tools.custom-props($fluid-text-sizes);
-   @include tools.custom-props($fluid-sizes);
+   @include tools.custom-props($fluid-sizes, 'size-');
    @include tools.custom-props($container-sizes);
 }
 

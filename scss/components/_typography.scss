@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5 {
 	line-height: 1;
 	margin-top: clamp(#{$phi}rem, 3.14vw, #{$pi}rem);
 	margin-bottom: clamp(0.618rem, 1.618vw, 1.618rem);
-	color: var(--heading-color);
+	color: $h-color;
 	transition: all 200ms ease;
 	@include only(first) {
 		margin-top: 0;
