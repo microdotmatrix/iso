@@ -35,8 +35,9 @@ body {
    font-size: $text-size;
    font-family: $text-font;
    font-weight: $text-weight;
-   background: $body-bg;
+   background-image: $body-bg;
    background-size: 100%;
+   background-attachment: fixed;
    text-rendering: optimizeLegibility;
    -webkit-text-size-adjust: 100%;
    font-feature-settings: "kern" 1;
