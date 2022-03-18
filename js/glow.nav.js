@@ -9,9 +9,9 @@ const svgs = document.querySelectorAll("svg");
 const border = document.getElementsByClassName("border-effect");
 
 const home = document.getElementById("home-icon");
-const explore = document.getElementById("explore-icon");
+const explore = document.getElementById("about-icon");
 const messages = document.getElementById("messages-icon");
-const profile = document.getElementById("profile-icon");
+const profile = document.getElementById("contact-icon");
 
 links.forEach(function (link) {
   link.addEventListener("click", function (e) {
@@ -22,7 +22,7 @@ links.forEach(function (link) {
         link.classList.add("active");
         home.classList.add("active-fill");
         break;
-      case "explore":
+      case "about":
         border[0].style.left = "31%";
         removeStyles();
         link.classList.add("active");
@@ -34,7 +34,7 @@ links.forEach(function (link) {
         link.classList.add("active");
         messages.classList.add("active-fill");
         break;
-      case "profile":
+      case "contact":
         border[0].style.left = "81%";
         removeStyles();
         link.classList.add("active");

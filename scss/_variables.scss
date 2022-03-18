@@ -1,9 +1,9 @@
 // Breakpoints
-$xs: 32rem !default; // 512px
-$sm: 48rem !default; // 768px
-$md: 64rem !default; // 1024px
-$lg: 80rem !default; // 1280px
-$xl: 90rem !default; // 1440px
+$bp-xs: 32rem !default; // 512px
+$bp-sm: 48rem !default; // 768px
+$bp-md: 64rem !default; // 1024px
+$bp-lg: 80rem !default; // 1280px
+$bp-xl: 90rem !default; // 1440px
 
 $map-for-breakpoints: (
   "xsmall": 0,

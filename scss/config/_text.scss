@@ -43,7 +43,7 @@ $container-sizes: (
    @include tools.custom-props($container-sizes);
 }
 
-@include breakpoint(max, $md) {
+@include breakpoint(max, $bp-md) {
    :where(html) {
       --h1: var(--xxxl);
       --h2: var(--xxl);
