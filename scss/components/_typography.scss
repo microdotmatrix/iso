@@ -43,3 +43,12 @@ small,
 	line-height: 1.5;
 	letter-spacing: 0.0618rem;
 }
+
+p {
+   font-size: $p;
+   line-height: $text-line;
+   margin: $space-e 0 $space-pi;
+   @include except(first) {
+      margin-top: 0;
+   }
+}

@@ -714,7 +714,7 @@ h5:first-of-type
 }nav.electric ul li
 {font-size: var(--p);font-weight: 300;
 
-    display: flex;flex-direction: column;width: 100%;height: 100%;padding-bottom: 15px;list-style: none;cursor: pointer;transition: color .8s;color: #3c4655;justify-content: flex-end;align-content: space-between;align-items: center;
+    display: flex;flex-direction: column;width: 100%;height: 100%;padding-bottom: 15px;list-style: none;cursor: pointer;transition: color .8s;justify-content: flex-end;align-content: space-between;align-items: center;
 }nav.electric ul li:hover,
 nav.electric ul li:active
 {
@@ -722,7 +722,7 @@ nav.electric ul li:active
 }nav.electric ul li a
 {position: relative;transition: all .3s;text-decoration: none;text-transform: lowercase;
 
-    color: currentColor;
+    color: #3c4655;
 }nav.electric ul li a::after
 {position: absolute;top: 0;left: 0;
 
@@ -735,18 +735,15 @@ nav.electric ul li:active
 
     --highlight-trans: translateY(0) scaleX(1);
 }.active a
-{letter-spacing: 2px;
-
-    color: var(--accent);
+{
+    letter-spacing: 2px;
 }.active a::after
-{transform: scaleX(1.25);
-
-    opacity: .5;filter: blur(12px);
+{transform: scaleX(1.25);opacity: .5;
+    color: var(--accent);filter: blur(12px);
 }svg
 {
     width: var(--xl);height: var(--xl);margin: 10px 0;transition: all 1.5s;fill: transparent;stroke-width: .5;stroke-opacity: 1;
-}path,
-g
+}svg path
 {
     stroke: #3c4655;stroke-width: .75;
 }.active-fill
@@ -756,9 +753,6 @@ g
 .active-fill > g > path
 {
     stroke: var(--accent);stroke-opacity: 0;stroke-width: .5;
-}#home-no-touch
-{
-    stroke: transparent;stroke-width: 4;
 }.hero
 {
     display: flex;padding: 3.14159rem 0;align-items: center;

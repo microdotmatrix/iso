@@ -32,7 +32,6 @@ nav.electric {
          font-size: $p;
          list-style: none;
          padding-bottom: 15px;
-         color: $nav-link;
          font-weight: 300;
          cursor: pointer;
          transition: color 0.8s;
@@ -41,7 +40,8 @@ nav.electric {
             --highlight-trans: translateY(0) scaleX(1);
          }
          a {
-            color: currentColor;
+            // color: currentColor;
+            color: $nav-link;
             text-decoration: none;
             transition: all 0.3s;
             position: relative;
@@ -77,9 +77,9 @@ nav.electric {
    --highlight-trans: translateY(0) scaleX(1);
    color: var(--accent);
    a {
-      color: var(--accent);
       letter-spacing: 2px;
       &::after {
+         color: var(--accent);
          opacity: 0.5;
          filter: blur(12px);
          transform: scaleX(1.25);
@@ -95,11 +95,10 @@ svg {
    stroke-width: 0.5;
    stroke-opacity: 1;
    transition: all 1.5s;
-}
-
-path, g {
-   stroke: $nav-link;
-   stroke-width: 0.75;
+   path {
+      stroke: $nav-link;
+      stroke-width: 0.75;
+   }
 }
 
 .active-fill {
@@ -115,9 +114,4 @@ path, g {
    stroke: var(--accent);
    stroke-opacity: 0;
    stroke-width: 0.5;
-}
-
-#home-no-touch {
-   stroke: transparent;
-   stroke-width: 4;
 }
