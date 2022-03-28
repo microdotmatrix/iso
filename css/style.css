@@ -616,6 +616,12 @@ h5:first-of-type
 .text-small
 {
     font-size: .618rem;line-height: 1.5;letter-spacing: .0618rem;
+}p
+{
+    font-size: var(--p);line-height: 1.618rem;margin: var(--space-e) 0 var(--space-pi);
+}p:not(:first-of-type)
+{
+    margin-top: 0;
 }img
 {position: relative;
 

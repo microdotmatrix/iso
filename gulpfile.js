@@ -5,6 +5,18 @@ const cleancss = require('gulp-clean-css');
 const csscomb = require('gulp-csscomb');
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync').create();
+
+const reload = browserSync.reload;
+
+function serve() {
+   browserSync.init({
+      server: {
+         baseDir: "./",
+         port: 8080
+     }
+   });
+}
 
 function build() {
    return gulp
@@ -16,16 +28,17 @@ function build() {
    .pipe(csscomb())
    .pipe(gulp.dest('css/'))
    .pipe(cleancss())
-   .pipe(rename({
-      suffix: '.min'
-   }))
-   .pipe(gulp.dest('css/'));
+   .pipe(rename({ suffix: '.min' }))
+   .pipe(gulp.dest('css/'))
+   .pipe(browserSync.stream());
+   
 };
 
 function watch() {
-   gulp.watch('scss/**/*.scss', parallel(build));
+   gulp.watch('scss/**/*.scss', parallel(build)).on("change", reload);
  }
 
 exports.build = build;
 exports.watch = watch;
+exports.serve = serve;
 exports.default = build;

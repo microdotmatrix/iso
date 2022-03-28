@@ -4,6 +4,7 @@
    "description": "Building a foundation for future projects",
    "devDependencies": {
       "accoutrement": "^4.0.0",
+      "browser-sync": "^2.27.9",
       "gulp": "^4.0.2",
       "gulp-autoprefixer": "^8.0.0",
       "gulp-clean-css": "^3.10.0",
